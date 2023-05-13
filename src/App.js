@@ -23,6 +23,7 @@ function App() {
     // alert(newList.toString())
     setTasks(newList) 
     setCookies(newList)
+    setNewTask("")
    }
 
    const setCookies=(newTasks)=>{
@@ -51,12 +52,14 @@ function App() {
   }); // = [<li>This is my first task<button ></li>, <li>second task</li>]
 
   return (
-    <div className="App">
-      <h1>To Do App</h1>
-      <input value={newTask} onChange={e => setNewTask(e.target.value)} placeholder="write your task here..." type="text"></input>
-      <button onClick={addNewTask}>Add</button>
+    <div className="app">
+      <h1 className="mainHeading">Lots Of Lists</h1>
       <h2>List:</h2>
       <ul>{listItems}</ul>
+      <div className="bottomBar">
+      <input className="search-bar" value={newTask} onChange={e => setNewTask(e.target.value)} placeholder="write your task here..." type="text"></input>
+      <button className="button" onClick={addNewTask}>Add</button>
+      </div>
     </div>
   );
 }
