@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
 
@@ -13,7 +13,19 @@ function App() {
     setTasks(newList)
    }
 
-  const listItems = tasks.map(task => <li>{task}</li>);
+
+  const listItems = tasks.map((task) => { 
+    return (<li>
+              {task}
+              <button onClick={()=>{ 
+                setTasks(
+                  tasks.filter(
+                    (item)=> task != item
+                    ))
+                  }
+             }>Delete</button>
+            </li>)
+  }); // = [<li>This is my first task<button ></li>, <li>second task</li>]
 
   return (
     <div className="App">
