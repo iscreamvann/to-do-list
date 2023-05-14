@@ -6,6 +6,9 @@
 .app{
  text-align: center;
   font-size: 35;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .mainHeading{
@@ -13,6 +16,11 @@ text-align: center;
 font-family: 'Bebas Neue', sans-serif;
 font-size: 75px;
 margin: 20px;
+color: white;
+text-shadow: 2px 4px 0 black;
+  
+  
+ 
 }
 
 body{
@@ -21,12 +29,14 @@ body{
 }
 
 .button{
-box-shadow: 0 2px 4px rgb(0, 0, 0);
+/* box-shadow: 0 2px 4px rgb(0, 0, 0); */
 position: relative;
 width: 100px;
 border-radius: 10px;
 margin-left: 10px;
-background-color: rgb(255, 250, 250);
+background-color: rgb(255, 250, 250);border: none;
+font-size: 20px;
+font-weight: 600;
 }
 
 .listButton{
@@ -36,19 +46,22 @@ background-color: rgb(255, 250, 250);
   font-weight: 900;
  font-size: 15px;
  margin-left: 5px;
-  
+ position: absolute;
+ right: 0;
+ height: 50px;
+ width: 50px;
 }
 
 .search-bar{
-  box-shadow: 0 2px 4px rgb(0, 0, 0);
+  /* box-shadow: 0 2px 4px rgb(0, 0, 0); */
   flex: 1;
   border-radius: 10px;
   padding: 10px;
+  border: none;
+ 
 }
 
 .bottomBar{
-  position: absolute;
-  bottom: 0px;
   height: 90px;
   width: 100%;
   display: flex;
@@ -60,8 +73,23 @@ background-color: rgb(255, 250, 250);
 .list{
   list-style-type: none;
   padding: 0;
+  flex: 1;
+  background-color: white;
+  margin: 0;
+  overflow-y: scroll;
+  padding-bottom: 50px;
 }
 
-.listItems{
+.listItem{
+height: 50px;
+line-height: 50px;
+font-size: 26px;
+border-bottom: 1px solid #a4a4a4;
+margin: 0 30px;
+position: relative;
+text-align: left;
+}
 
+.listItem:last-child{
+  border:none;
 }

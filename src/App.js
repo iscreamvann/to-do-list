@@ -35,7 +35,7 @@ function App() {
 
 
   const listItems = tasks.map((task) => { 
-    return (<li className="listItems">
+    return (<li className="listItem">
               {task}
               <button className="listButton" onClick={
                 () => { 
