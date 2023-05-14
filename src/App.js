@@ -35,9 +35,9 @@ function App() {
 
 
   const listItems = tasks.map((task) => { 
-    return (<li>
+    return (<li className="listItems">
               {task}
-              <button onClick={
+              <button className="listButton" onClick={
                 () => { 
               
                 const deletedTaskList = tasks.filter(
@@ -47,7 +47,7 @@ function App() {
                 setTasks(deletedTaskList);
                 setCookies(deletedTaskList)
                 }
-             }>Delete</button>
+             }>X</button>
             </li>)
   }); // = [<li>This is my first task<button ></li>, <li>second task</li>]
 
@@ -55,7 +55,7 @@ function App() {
     <div className="app">
       <h1 className="mainHeading">Lots Of Lists</h1>
       <h2>List:</h2>
-      <ul>{listItems}</ul>
+      <ul className="list">{listItems}</ul>
       <div className="bottomBar">
       <input className="search-bar" value={newTask} onChange={e => setNewTask(e.target.value)} placeholder="write your task here..." type="text"></input>
       <button className="button" onClick={addNewTask}>Add</button>
